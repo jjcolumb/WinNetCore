@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+	<PropertyGroup>
+		<OutputType>WinExe</OutputType>
+		<TargetFramework>netcoreapp3.1</TargetFramework>
+		<UseWindowsForms>true</UseWindowsForms>
+		<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+		<RootNamespace>WinNetCore.Win</RootNamespace>
+		<Deterministic>False</Deterministic>
+	</PropertyGroup>
+	<ItemGroup>
+		<EmbeddedResource Include="**\*.svg" />
+		<EmbeddedResource Include="**\*.xafml" />
+		<EmbeddedResource Remove="bin\**" />
+	</ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="3.2.1" />
+		<PackageReference Include="System.Data.SqlClient" Version="4.7.0-preview.19073.11" />
+		<PackageReference Include="System.Diagnostics.PerformanceCounter" Version="4.6.0" />
+	</ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\WinNetCore.Module.Win\WinNetCore.Module.Win.csproj" />
+		<ProjectReference Include="..\WinNetCore.Module\WinNetCore.Module.csproj" />
+	</ItemGroup>
+</Project>

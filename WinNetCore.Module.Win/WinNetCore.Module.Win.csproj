@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+	<PropertyGroup>
+		<OutputType>Library</OutputType>
+		<TargetFramework>netcoreapp3.1</TargetFramework>
+		<UseWindowsForms>true</UseWindowsForms>
+		<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+		<RootNamespace>WinNetCore.Module.Win</RootNamespace>
+		<Deterministic>False</Deterministic>
+	</PropertyGroup>
+	<ItemGroup>
+		<EmbeddedResource Include="**\*.svg" />
+		<EmbeddedResource Include="**\*.xafml" />
+		<EmbeddedResource Remove="bin\**" />
+	</ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\WinNetCore.Module\WinNetCore.Module.csproj" />
+	</ItemGroup>
+</Project>
